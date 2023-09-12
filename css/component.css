@@ -46,12 +46,7 @@
 		cursor: pointer;
 }
 
-.no-touch .gn-menu-main a:hover,
-.no-touch .gn-menu li.gn-search-item:hover,
-.no-touch .gn-menu li.gn-search-item:hover a {
-		background: #5f6f81;
-		color: white;
-}
+
 
 .gn-menu-main > li {
 		display: block;
