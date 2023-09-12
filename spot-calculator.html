@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>coinvestfolio</title>
+		<meta name="description" content="Easily calculate your cryptocurrency profit/loss, dca, etc with our Calculator." />
+		<meta name="keywords" content="Crypto, profit and loss, calculator, dca, spot, future" />
+		<meta name="author" content="PNL" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li><a href="spot-calculator"><span>Spot Calculator</span></a></li>
+								<li><a href="future-calculator">Future Calculator</a></li>
+								<li><a href="dca-calculator">DCA Calculator</a></li>
+								<li><a href="tax-calculator">Tax Calculator</a></li>
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+			</ul>
+			<header>
+				      <a href="https://www.coinvestfolio.com/">
+			            <img src="img/new_logo.svg" alt="CoinvestFolio Logo" id="logo">
+			        </a>
+				<h1>Spot Calculator</h1>
+			</header>
+      <!-- Spot Calculator 내용 시작 -->
+      <div class="spot-calculator">
+             <label for="buyPrice">Buy Price ($)</label>
+        <input type="number" id="buyPrice" placeholder="Enter buy price">
 
+        <label for="sellPrice">Sell Price ($)</label>
+        <input type="number" id="sellPrice" placeholder="Enter sell price">
+
+        <label for="investmentAmount">Investment Amount ($)</label>
+        <input type="number" id="investmentAmount" placeholder="Enter investment amount">
+
+        <label for="buyingFeeSelect">Buying Fee</label>
+        <select id="buyingFeeSelect" style="width: 100%;" onchange="updateInputValue('buyingFee', this.value)">
+            <option value="0.01">0.01%</option>
+            <option value="0.05">0.05%</option>
+            <option value="1">1%</option>
+            <option value="custom">Custom...</option>
+        </select>
+        <input type="number" id="buyingFee" placeholder="Enter or select fee" style="display:none;">
+
+        <label for="sellingFeeSelect">Selling Fee</label>
+        <select id="sellingFeeSelect" style="width: 100%;" onchange="updateInputValue('sellingFee', this.value)">
+            <option value="0.01">0.01%</option>
+            <option value="0.05">0.05%</option>
+            <option value="1">1%</option>
+            <option value="custom">Custom...</option>
+        </select>
+        <input type="number" id="sellingFee" placeholder="Enter or select fee" style="display:none;">
+
+        <button onclick="calculateProfitLoss()">Calculate</button>
+        <button onclick="sharePNL()">Share My PNL</button>
+        <p id="resultPNL" class="result"></p>
+        <p id="resultROE" class="result"></p>
+    </div>
+    <!-- Spot Calculator 내용 끝 -->
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+	</body>
+</html>
