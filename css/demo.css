@@ -49,6 +49,10 @@ body {
 	color: #74818e;
 	padding: 0 0 0.6em 0.1em;
 }
+#logo {
+	width: 120%;
+	height: auto;
+}
 
 /* To Navigation Style */
 .codrops-top {
