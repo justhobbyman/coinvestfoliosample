@@ -103,12 +103,12 @@
 		width: 60px;
 		border-top: 1px solid #c6d0da;
 		background: white;
-		-webkit-transform: translateX(-100%);
-	    	-moz-transform: translateX(-100%);
-	    	transform: translateX(-100%);
-	    	-webkit-transition: translateX(-100%);
-	    	-moz-transition: translateX(-100%);
-	    	transition: translateX(-100%);
+		-webkit-transform: translateX(-60px);
+	    	-moz-transform: translateX(-60px);
+	    	transform: translateX(-60px);
+	    	-webkit-transition: translateX(-60px);
+	    	-moz-transition: translateX(-60px);
+	    	transition: translateX(-60px);
 }
 
 .gn-scroller {
@@ -304,9 +304,9 @@ input.gn-search:focus {
 
 .gn-menu-wrapper.gn-open-all,
 .gn-menu-wrapper.gn-open-part {
-		-webkit-transform: translateX(-100%);
-		-moz-transform: translateX(-100%);
-		transform: translateX(-100%);
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		transform: translateX(0);
 }
 
 .gn-menu-wrapper.gn-open-all {
