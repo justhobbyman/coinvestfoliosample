@@ -183,21 +183,6 @@ input.gn-search:focus {
 
 /* placeholder */
 
-.no-touch .gn-menu li.gn-search-item:hover .gn-search::-webkit-input-placeholder {
-		color: white
-}
-
-.no-touch .gn-menu li.gn-search-item:hover .gn-search:-moz-placeholder {
-		color: white
-}
-
-.no-touch .gn-menu li.gn-search-item:hover .gn-search::-moz-placeholder {
-		color: white
-}
-
-.no-touch .gn-menu li.gn-search-item:hover .gn-search:-ms-input-placeholder {
-		color: white
-}
 
 .gn-menu-main a.gn-icon-search {
 		position: absolute;
@@ -283,11 +268,6 @@ input.gn-search:focus {
 		content: '';
 }
 
-.no-touch .gn-icon-menu:hover::before,
-.no-touch .gn-icon-menu.gn-selected:hover::before {
-		background: white;
-		box-shadow: 0 3px #5f6f81, 0 -6px white, 0 -9px #5f6f81, 0 -12px white;
-}
 
 .gn-icon-menu.gn-selected::before {
 		background: #5993cd;
