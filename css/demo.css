@@ -50,7 +50,7 @@ body {
 	padding: 0 0 0.6em 0.1em;
 }
 #logo {
-	width: 300px;
+	width: 500px;
 	height: auto;
 }
 
@@ -145,7 +145,7 @@ body {
 		display: none;
 	}
 	#logo {
-		width: 200px;
+		width: 300px;
 		height: auto;
 	}
 }
