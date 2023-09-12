@@ -81,11 +81,11 @@
 }
 
 .gn-menu-main > li > a {
-		padding: 0 15px;
+		padding: 0 30px;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		font-weight: bold;
-		 line-height: 60px;
+		line-height: 60px;
 }
 
 .gn-menu-main:after {
