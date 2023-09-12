@@ -1,44 +1,131 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body {
+    padding: 200px 0 50px 0;
+    font-family: 'Lato', Arial, sans-serif;
+    background-color: #000000;
+    text-align: center;
+}
+
+header {
+    color: #FFFFFF;
+    font-size: 34px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000000;
+    text-align: center;
+    height: 80px;
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+}
+
+#languageSelect {
+    width: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #242424;
+    color: #FFFFFF;
+    border: 3px solid #EE7E19;
+    border-radius: 8px;
+    text-align: center; 
+    padding: 10px 10px;
+    height: 45px;
+    margin-left: 0px;
+    margin-right: 40px;
+}
+
 .spot-calculator {
-            padding-top: 150px;
-            background-color: #FFFFFF;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px 30px;
-            border-radius: 12px;
-            max-width: 450px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-            margin: 0 auto; 
-        }
+    padding-top: 150px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 12px;
+    max-width: 450px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; 
+}
 
 label, select, input[type="number"] {
-            box-sizing: border-box;
-        }
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+    width: 100%;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+select#sellingFeeSelect, input#sellingFee {
+    margin-bottom: 40px;
+}
 
 button {
-            width: 100%;
-            padding: 16px;
-            background-color: #EE7E19;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 22px;
-            border-radius: 8px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
+    width: 100%;
+    padding: 16px;
+    background-color: #EE7E19;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+button:focus, input:focus, select:focus {
+    outline: 2px solid #EE7E19;
+}
 
 .result {
-            color: #FFFFFF;
-            font-size: 22px;
-            font-weight: bold;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
- button:focus, input:focus, select:focus {
-            outline: 2px solid #EE7E19;
-        }
+@media (min-width: 481px) and (max-width: 768px) {
+    .calculator {
+        padding: 30px 40px;
+    }
+}
 
+@media (min-width: 769px) {
+    .calculator {
+        padding: 40px 50px;
+    }
+}
+
+.calculator-title {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
