@@ -30,7 +30,7 @@
 }
 
 .gn-menu-main {
-		position: fixed;
+		position: inherit;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -100,9 +100,8 @@
 		position: fixed;
 		top: 60px;
 		bottom: 0;
-		left: 0;
+		left: auto;
 		overflow: hidden;
-		width: 60px;
 		border-top: 1px solid #c6d0da;
 		background: white;
 		-webkit-transform: translateX(-60px);
@@ -115,7 +114,7 @@
 
 .gn-scroller {
 		position: absolute;
-		overflow-y: scroll;
+		overflow-y: auto;
 		width: 370px;
 		height: 100%;
 }
@@ -339,10 +338,9 @@ input.gn-search:focus {
     .gn-menu-main {
         max-width: 80%;
         margin: 0 auto;
-	left: 10%;
     }
     .gn-menu-wrapper.gn-open-all .gn-scroller {
-        width: 80%;
+        width: 100%;
 	overflow-x: hidden;
 	margin: 0 auto;
     }
