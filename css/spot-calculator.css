@@ -68,14 +68,3 @@ button:focus, input:focus, select:focus {
     margin-bottom: 5px;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
-    .calculator {
-        padding: 30px 40px;
-    }
-}
-
-@media (min-width: 769px) {
-    .calculator {
-        padding: 40px 50px;
-    }
-}
