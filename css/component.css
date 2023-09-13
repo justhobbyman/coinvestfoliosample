@@ -75,6 +75,7 @@
 		float: left;
 		border-right: 1px solid #c6d0da;
 		border-left: none;
+		background-color: #000000;
 }
 
 .gn-menu-main > li > a {
