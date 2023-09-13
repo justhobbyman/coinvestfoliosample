@@ -29,7 +29,7 @@
 			this.trigger = this.el.querySelector( 'a.gn-icon-menu' );
 			this.menu = this.el.querySelector( 'nav.gn-menu-wrapper' );
 			this.isMenuOpen = false;
-			this.eventtype = mobilecheck() ? 'touchstart' : 'click';
+			this.eventtype = 'click';
 			this._initEvents();
 
 			var self = this;
