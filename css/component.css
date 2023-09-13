@@ -339,8 +339,10 @@ input.gn-search:focus {
     .gn-menu-main {
         max-width: 80%;
         margin: 0 auto;
+	left: 10%;
     }
     .gn-menu-wrapper.gn-open-all .gn-scroller {
         width: 80%;
+	overflow-x: hidden;
     }
 }
