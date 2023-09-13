@@ -12,11 +12,9 @@
 
 body {
 	background: black;
-}
-.container {
-	position: relative; /* 추가된 코드 */
-	min-height: 100vh;  /* 추가된 코드 */
-	padding-bottom: 60px; /* 푸터의 높이만큼 공간을 확보 */
+	position: relative;
+	min-height: 100vh;
+	padding-bottom: 60px;
 }
 .container > header,
 .codrops-top {
