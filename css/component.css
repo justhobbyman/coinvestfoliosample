@@ -30,12 +30,18 @@
 }
 
 .gn-menu-main {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 60px;
-		font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%; /* 원하는 최대 너비로 조절하세요. */
+    height: 60px;
+    margin: 0 auto;
+    padding: 0 20px; /* 원하는 패딩으로 조절하세요. */
+    box-sizing: content-box;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* 중앙 정렬을 위한 코드 */
 }
 
 
@@ -96,21 +102,18 @@
 		background: #5f6f81;
 		color: white;
 }
+
 .gn-menu-wrapper {
-		position: fixed;
-		top: 60px;
-		bottom: 0;
-		left: 0;
-		overflow: hidden;
-		width: 60px;
-		border-top: 1px solid #c6d0da;
-		background: white;
-		-webkit-transform: translateX(-60px);
-	    	-moz-transform: translateX(-60px);
-	    	transform: translateX(-60px);
-	    	-webkit-transition: translateX(-60px);
-	    	-moz-transition: translateX(-60px);
-	    	transition: translateX(-60px);
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* 중앙 정렬을 위한 코드 */
+    overflow: hidden;
+    max-width: 80%; /* 원하는 최대 너비로 조절하세요. */
+    border-top: 1px solid #c6d0da;
+    background: white;
+    width: 100%; /* 전체 너비를 사용하되, max-width로 제한합니다. */
 }
 
 .gn-scroller {
