@@ -16,6 +16,10 @@ body {
 	min-height: 100vh;
 	padding-bottom: 60px;
 }
+.container {
+	max-width: 1200px;
+	margin: 0 auoto;
+}
 .container > header,
 .codrops-top {
 	color: #fff;
