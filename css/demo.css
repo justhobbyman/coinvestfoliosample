@@ -29,8 +29,11 @@ body {
 .container > header {
 	margin: 0 auto;
 	padding: 8em 2em;
-	padding-left: 370px;
 	background: rgba(0,0,0,0.05);
+	display: flex; /* Flexbox를 사용하여 내용을 중앙에 배치 */
+	justify-content: center; /* 가로 방향으로 중앙 정렬 */
+	align-items: center; /* 세로 방향으로 중앙 정렬 */
+	flex-direction: column; /* 자식 요소들을 세로 방향으로 배열 */
 }
 
 .container > header a {
