@@ -68,7 +68,7 @@ button:focus, input:focus, select:focus {
     margin-bottom: 5px;
 }
 footer {
-	position: fixed;
+	position: relative;
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
