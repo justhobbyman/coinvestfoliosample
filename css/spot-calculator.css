@@ -67,4 +67,10 @@ button:focus, input:focus, select:focus {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+footer {
+            margin-top: 50px;
+            font-size: 18px;
+            color: #888;
+            font-weight: bold;
+        }
 
