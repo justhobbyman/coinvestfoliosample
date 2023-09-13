@@ -336,7 +336,7 @@ input.gn-search:focus {
 
 @media screen and (min-width: 1024px) {
     .gn-menu-main {
-        max-width: 80%;
+        max-width: 100%;
         margin: 0 auto;
     }
     .gn-menu-wrapper.gn-open-all .gn-scroller {
