@@ -68,9 +68,12 @@ button:focus, input:focus, select:focus {
     margin-bottom: 5px;
 }
 footer {
-            margin-top: 50px;
-            font-size: 18px;
-            color: #888;
-            font-weight: bold;
-        }
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        color: #888;
+        font-weight: bold;
+}
 
