@@ -17,7 +17,7 @@ body {
 	padding-bottom: 60px;
 }
 .container {
-	max-width: 1200px;
+	max-width: 1024px;
 	margin: 0 auto;
 }
 .container > header,
