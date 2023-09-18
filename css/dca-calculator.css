@@ -78,11 +78,24 @@ button:focus, input:focus, select:focus {
         }
 .investment-input {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     margin-bottom: 10px;
 }
 .investment-input button {
     margin-left: 10px;
+}
+.investment-input button.remove-button {
+    margin-left: 0;
+}
+.investment-field {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.investment-input label {
+    margin-left: 0;
+    margin-bottom: 5px;
 }
 .result {
             color: #000000;
