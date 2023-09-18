@@ -20,6 +20,7 @@ function addInvestment() {
 
     let removeButton = document.createElement('button');
     removeButton.innerText = '-';
+    removeButton.className = 'remove-button';  // 클래스를 추가합니다.
     removeButton.onclick = function() {
         container.removeChild(div);
     };
