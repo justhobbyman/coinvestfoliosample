@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="img/icon.svg" type="image/svg+xml">
+		<title>CoinvestFolio</title>
+		<meta name="description" content="Easily calculate your cryptocurrency profit/loss, dca, etc with our Calculator." />
+		<meta name="keywords" content="Crypto, profit and loss, calculator, dca, spot, future" />
+		<meta name="author" content="CoinvestFolio" />
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5897295133273451"crossorigin="anonymous"></script>
+   		<meta name="google-site-verification" content="WqVYzW8N3gkE6iEBnUzrkVRODWjX37RLIEHehfhdf5E" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/dca-calculator.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li><a href="spot-calculator"><span>Spot Calculator</span></a></li>
+								<li><a href="future-calculator">Future Calculator</a></li>
+								<li><a href="dca-calculator">DCA Calculator</a></li>
+								<li><a href="tax-calculator">Tax Calculator</a></li>
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<li><a href="https://www.coinvestfolio.com/">Home</a></li>
+			</ul>
+			<header>
+				<h1>Crypto DCA Calculator</h1>
+			</header>
+      <!-- DCA Calculator 내용 시작 -->
+     <div class="dca-calculator">
+        <h2>Initial Investment</h2>
+        <div>
+            <label>Shares:</label>
+            <input type="number" id="initialShares">
+            <label>Avg Buy:</label>
+            <input type="number" id="initialAvgBuy">
+        </div>
+        
+        <h3>Next Investments</h3>
+        <div>
+            <label>Shares:</label>
+            <input type="number" id="shares">
+            <label>Avg Buy:</label>
+            <input type="number" id="avgBuy">
+            <button onclick="addInvestment()">Add</button>
+        </div>
+        
+        <div id="investments"></div>
+        <button onclick="calculateDCA()">Calculate</button>
+        <button onclick="resetCalculator()">Reset</button>
+        <p id="resultShares" class="result"></p>
+        <p id="resultAvgBuy" class="result"></p>
+        <p id="resultTotalCost" class="result"></p>
+    </div>
 
+    <footer>
+        © CoinvestFolio. All rights reserved.
+    </footer>
+    <!-- DCA Calculator 내용 끝 -->
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/gnmenu.js"></script>
+		<script src="js/dca-calculator.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+	</body>
+</html>
