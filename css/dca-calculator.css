@@ -1,1 +1,70 @@
+ .dca-calculator {
+            padding-top: 150px;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 30px;
+            border-radius: 12px;
+            max-width: 450px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            margin: 0 auto; 
+        }
+label, select, input[type="number"] {
+            box-sizing: border-box;
+        }
+label {
+            display: block;
+            text-align: left;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #000000;
+            font-weight: bold;
+            width: 100%;
+        }
+select, input[type="number"] {
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            margin-bottom: 25px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
 
+button {
+            width: 100%;
+            padding: 16px;
+            background-color: #EE7E19;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 22px;
+            border-radius: 8px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+footer {
+       	position: relative;
+       	bottom: 0;
+       	left: 50%;
+       	transform: translateX(-50%);
+       	font-size: 18px;
+       	color: #888;
+       	font-weight: bold;
+       	width: 100%;
+       	text-align: center;
+       	padding: 10px 0;
+       	margin-bottom: 10px;
+       }
+button:focus, input:focus, select:focus {
+            outline: 2px solid #EE7E19;
+        }
+.result {
+            color: #FFFFFF;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
