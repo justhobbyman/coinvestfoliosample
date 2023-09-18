@@ -74,7 +74,7 @@ button:focus, input:focus, select:focus {
         }
 .investment-input {
     display: flex;
-    flex-direction: colum;
+    flex-direction: column;
     margin-bottom: 10px;
 }
 .investment-input button {
