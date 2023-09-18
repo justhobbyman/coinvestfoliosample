@@ -20,19 +20,31 @@ function addInvestment() {
 
     let removeButton = document.createElement('button');
     removeButton.innerText = '-';
-    removeButton.className = 'remove-button';  // 클래스를 추가합니다.
+    removeButton.className = 'remove-button';
     removeButton.onclick = function() {
         container.removeChild(div);
     };
 
+    // 각 입력 칸을 감싸는 div를 생성합니다.
+    let sharesDiv = document.createElement('div');
+    sharesDiv.className = 'investment-field';
+
+    let avgBuyDiv = document.createElement('div');
+    avgBuyDiv.className = 'investment-field';
+
+    sharesDiv.appendChild(sharesLabel);
+    sharesDiv.appendChild(sharesInput);
+
+    avgBuyDiv.appendChild(avgBuyLabel);
+    avgBuyDiv.appendChild(avgBuyInput);
+
     div.appendChild(removeButton);
-    div.appendChild(sharesLabel);
-    div.appendChild(sharesInput);
-    div.appendChild(avgBuyLabel);
-    div.appendChild(avgBuyInput);
+    div.appendChild(sharesDiv);
+    div.appendChild(avgBuyDiv);
     
     container.appendChild(div);
 }
+
 
 function calculateDCA() {
     let initialShares = parseFloat(document.getElementById('initialShares').value) || 0;
