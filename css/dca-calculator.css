@@ -69,7 +69,7 @@ button:focus, input:focus, select:focus {
 .investment-input button {
     margin-left: 10px;
 }
-.remove-button {
+div > button.remove-button {
     background-color: #ccc;
     border: none;
     width: 25px;
