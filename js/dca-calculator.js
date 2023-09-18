@@ -34,8 +34,8 @@ function addInvestment() {
 }
 
 function calculateDCA() {
-    let initialShares = parseFloat(document.getElementById('initialShares').value);
-    let initialAvgBuy = parseFloat(document.getElementById('initialAvgBuy').value);
+    let initialShares = parseFloat(document.getElementById('initialShares').value) || 0;
+    let initialAvgBuy = parseFloat(document.getElementById('initialAvgBuy').value) || 0;
     let initialTotalCost = initialShares * initialAvgBuy;
 
     let sharesInputs = document.querySelectorAll('.shares-input');
@@ -45,8 +45,8 @@ function calculateDCA() {
     let totalCost = initialTotalCost;
 
     for (let i = 0; i < sharesInputs.length; i++) {
-        let shares = parseFloat(sharesInputs[i].value);
-        let avgBuy = parseFloat(avgBuyInputs[i].value);
+        let shares = parseFloat(sharesInputs[i].value) || 0;
+        let avgBuy = parseFloat(avgBuyInputs[i].value) || 0;
         totalShares += shares;
         totalCost += shares * avgBuy;
     }
@@ -66,3 +66,6 @@ function resetCalculator() {
     document.getElementById('resultAvgBuy').innerText = '';
     document.getElementById('resultTotalCost').innerText = '';
 }
+window.onload = function() {
+    addInvestment();
+};
