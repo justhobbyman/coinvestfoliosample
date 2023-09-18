@@ -70,9 +70,11 @@ function calculateDCA() {
     document.getElementById('resultAvgBuy').innerText = "Average Buy: $" + avgCost.toFixed(2);
     document.getElementById('resultTotalCost').innerText = "Total Cost: $" + totalCost.toFixed(2);
 }
-
 function resetCalculator() {
-    document.getElementById('investment-container').innerHTML = '';
+    let container = document.getElementById('investment-container');
+    while (container.children.length > 1) { // 첫 번째 입력 칸만 남기고 삭제
+        container.removeChild(container.lastChild);
+    }
     document.getElementById('initialShares').value = '';
     document.getElementById('initialAvgBuy').value = '';
     document.getElementById('resultShares').innerText = '';
