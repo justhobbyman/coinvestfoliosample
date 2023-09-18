@@ -46,15 +46,15 @@ button {
             font-weight: bold;
         }
 .dca-calculator button.remove-button {
-    background-color: transparent;
-    border: none;
-    width: auto; 
-    height: auto; 
-    border-radius: 0; 
-    margin-right: 10px;  
-    cursor: pointer;  
-    color: #000; 
-    padding: 0; 
+    background-color: initial;
+    border: initial;
+    color: initial;
+    padding: initial;
+    margin-right: initial;
+    cursor: initial;
+    width: initial;
+    height: initial;
+    border-radius: initial;
 }
 footer {
        	position: relative;
