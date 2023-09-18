@@ -1,38 +1,36 @@
 let investments = [];
 
 function addInvestment() {
-    let shares = parseFloat(document.getElementById('shares').value);
-    let avgBuy = parseFloat(document.getElementById('avgBuy').value);
-    let totalCost = shares * avgBuy;
+    let container = document.getElementById('investment-container');
+    
+    let div = document.createElement('div');
+    div.className = 'investment-input';
 
-    investments.push({ shares, avgBuy, totalCost });
+    let sharesLabel = document.createElement('label');
+    sharesLabel.innerText = 'Shares:';
+    let sharesInput = document.createElement('input');
+    sharesInput.type = 'number';
+    sharesInput.className = 'shares-input';
 
-    // 입력 필드 초기화
-    document.getElementById('shares').value = '';
-    document.getElementById('avgBuy').value = '';
+    let avgBuyLabel = document.createElement('label');
+    avgBuyLabel.innerText = 'Avg Buy:';
+    let avgBuyInput = document.createElement('input');
+    avgBuyInput.type = 'number';
+    avgBuyInput.className = 'avgBuy-input';
 
-    displayInvestments();
-}
+    let removeButton = document.createElement('button');
+    removeButton.innerText = '-';
+    removeButton.onclick = function() {
+        container.removeChild(div);
+    };
 
-function removeInvestment(index) {
-    investments.splice(index, 1);
-    displayInvestments();
-}
-
-function displayInvestments() {
-    let container = document.getElementById('investments');
-    container.innerHTML = '';
-
-    investments.forEach((investment, index) => {
-        container.innerHTML += `
-            <div>
-                <button onclick="removeInvestment(${index})">-</button>
-                Shares (${index + 1}): ${investment.shares}
-                Avg Buy (${index + 1}): ${investment.avgBuy}
-                Total Cost (${index + 1}): ${investment.totalCost}
-            </div>
-        `;
-    });
+    div.appendChild(removeButton);
+    div.appendChild(sharesLabel);
+    div.appendChild(sharesInput);
+    div.appendChild(avgBuyLabel);
+    div.appendChild(avgBuyInput);
+    
+    container.appendChild(div);
 }
 
 function calculateDCA() {
@@ -40,8 +38,19 @@ function calculateDCA() {
     let initialAvgBuy = parseFloat(document.getElementById('initialAvgBuy').value);
     let initialTotalCost = initialShares * initialAvgBuy;
 
-    let totalShares = investments.reduce((acc, curr) => acc + curr.shares, initialShares);
-    let totalCost = investments.reduce((acc, curr) => acc + curr.totalCost, initialTotalCost);
+    let sharesInputs = document.querySelectorAll('.shares-input');
+    let avgBuyInputs = document.querySelectorAll('.avgBuy-input');
+
+    let totalShares = initialShares;
+    let totalCost = initialTotalCost;
+
+    for (let i = 0; i < sharesInputs.length; i++) {
+        let shares = parseFloat(sharesInputs[i].value);
+        let avgBuy = parseFloat(avgBuyInputs[i].value);
+        totalShares += shares;
+        totalCost += shares * avgBuy;
+    }
+
     let avgCost = totalCost / totalShares;
 
     document.getElementById('resultShares').innerText = "Shares: " + totalShares;
@@ -50,8 +59,7 @@ function calculateDCA() {
 }
 
 function resetCalculator() {
-    investments = [];
-    displayInvestments();
+    document.getElementById('investment-container').innerHTML = '';
     document.getElementById('initialShares').value = '';
     document.getElementById('initialAvgBuy').value = '';
     document.getElementById('resultShares').innerText = '';
