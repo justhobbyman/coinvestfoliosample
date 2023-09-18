@@ -162,3 +162,28 @@ body {
 		height: auto;
 	}
 }
+
+.terms-container {
+    padding: 20px;
+    color: white; 
+    margin-top: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.terms-container h1, .terms-container h2, .terms-container h4 {
+    margin-top: 20px;
+}
+
+.terms-container .p {
+    margin-bottom: 15px;
+}
+
+.terms-container a {
+    color: #EE7E19;
+    text-decoration: none;
+}
+
+.terms-container a:hover {
+    text-decoration: underline;
+}
