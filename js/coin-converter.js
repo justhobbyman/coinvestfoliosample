@@ -19,7 +19,7 @@ async function getCryptoPrice(coin, currency = 'usd') {
         throw new Error(`Cannot fetch price for ${coin} in ${currency}`);
     }
 
-    return data.quotes[currency.toUpperCase()].price;
+    return parseFloat(data.quotes[currency.toUpperCase()].price).toFixed(4);
 }
 
 async function loadAvailableCoins() {
