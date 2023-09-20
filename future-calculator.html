@@ -40,36 +40,35 @@
 				<h1>Crypto Future P/L Calculator</h1>
 			</header>
       <!-- Future Calculator 내용 시작 -->
-     <div class="future-calculator"> 
-        <label for="positionType">Position Type:</label>
-        <select id="positionType">
-            <option value="long">Long</option>
-            <option value="short">Short</option>
-        </select>
-    
-        <label for="leverageAmount">Leverage (e.g., 10 for 10x):</label>
-        <input type="number" id="leverageAmount" placeholder="Enter leverage">
-    
-        <label for="investmentLeverage">Coin Quantity:</label>
-        <input type="number" id="investmentLeverage" placeholder="Enter coin quantity">
-    
-        <label for="entryPrice">Entry Price ($):</label>
-        <input type="number" id="entryPrice" placeholder="Enter entry price">
-    
-        <label for="exitPrice">Exit Price ($):</label>
-        <input type="number" id="exitPrice" placeholder="Enter exit price">
-    
-        <button onclick="calculateLeverageProfitLoss()">Calculate</button>
-        <button onclick="sharePNL()">Share My PNL</button>
-        <p id="leverageResultDollar" class="result"></p>
-        <p id="leverageResultPercent" class="result"></p>
-    </div>
-
-    <footer>
-        © CoinvestFolio. All rights reserved.
-    </footer>
+		     <div class="future-calculator"> 
+		        <label for="positionType">Position Type:</label>
+		        <select id="positionType">
+		            <option value="long">Long</option>
+		            <option value="short">Short</option>
+		        </select>
+		    
+		        <label for="leverageAmount">Leverage (e.g., 10 for 10x):</label>
+		        <input type="number" id="leverageAmount" placeholder="Enter leverage">
+		    
+		        <label for="investmentLeverage">Coin Quantity:</label>
+		        <input type="number" id="investmentLeverage" placeholder="Enter coin quantity">
+		    
+		        <label for="entryPrice">Entry Price ($):</label>
+		        <input type="number" id="entryPrice" placeholder="Enter entry price">
+		    
+		        <label for="exitPrice">Exit Price ($):</label>
+		        <input type="number" id="exitPrice" placeholder="Enter exit price">
+		    
+		        <button onclick="calculateLeverageProfitLoss()">Calculate</button>
+		        <button onclick="sharePNL()">Share My PNL</button>
+		        <p id="leverageResultDollar" class="result"></p>
+		        <p id="leverageResultPercent" class="result"></p>
+		    </div>
     <!-- Future Calculator 내용 끝 -->
 		</div><!-- /container -->
+		<footer>
+		        © CoinvestFolio. All rights reserved.
+		</footer>
 		<script src="js/classie.js"></script>
 		<script src="js/gnmenu.js"></script>
 		<script src="js/future-calculator.js"></script>
