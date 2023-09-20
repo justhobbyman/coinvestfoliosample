@@ -113,6 +113,7 @@
 	    	-webkit-transition: translateX(-60px);
 	    	-moz-transition: translateX(-60px);
 	    	transition: translateX(-60px);
+		z-index: 100;
 }
 
 .gn-scroller {
