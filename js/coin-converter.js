@@ -1,3 +1,36 @@
+async function fetchPrice() {
+        const coin = document.getElementById('coinSelect').value;
+        const currency = document.getElementById('currencySelect').value;
+        const amount = parseFloat(document.getElementById('coinAmount').value);
+
+        try {
+            const pricePerCoin = await getCryptoPrice(coin, currency);
+            const totalPrice = (pricePerCoin * amount).toFixed(4); // 계산된 총 가격도 소수점 4자리까지만 표시
+            document.getElementById('priceResult').innerText = `${amount} ${coin.toUpperCase()} = ${totalPrice} ${currency.toUpperCase()}`;
+        } catch (error) {
+            console.error("Error fetching price:", error);
+            document.getElementById('priceResult').innerText = "Error fetching price. Please try again.";
+        }
+}
+
+async function loadCoinOptions() {
+        try {
+            const coins = await loadTop50CoinsByVolume();
+            const coinSelect = document.getElementById('coinSelect');
+            coins.forEach(coin => {
+                const option = document.createElement('option');
+                option.value = coin.symbol;
+                option.textContent = coin.name;
+                coinSelect.appendChild(option);
+            });
+        } catch (error) {
+            console.error('Error loading coin options:', error);
+        }
+}
+
+    window.addEventListener('DOMContentLoaded', loadCoinOptions);
+
+
 let coinIdCache = {};
 const SUPPORTED_CURRENCIES = ['USD', 'EUR', 'GBP', 'KRW', 'JPY', 'CAD', 'AUD']; // Coinpaprika에서 지원하는 통화를 추가합니다.
 
