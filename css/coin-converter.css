@@ -53,7 +53,7 @@ button:focus, input:focus, select:focus {
     outline: 2px solid #EE7E19;
 }
 
-.result {
+.priceResult {
     color: #000000;
     font-size: 22px;
     font-weight: bold;
