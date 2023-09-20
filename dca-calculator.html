@@ -40,36 +40,35 @@
 				<h1>Crypto DCA Calculator</h1>
 			</header>
       <!-- DCA Calculator 내용 시작 -->
-     <div class="dca-calculator">
-	    
-	    <h2>Initial Investment</h2>
-	    <div class="investment-input">
-		    <div class="investment-field">
-		        <label for="initialShares">Shares:</label>
-		        <input type="number" id="initialShares">
-		    </div>
-		    <div class="investment-field">
-		        <label for="initialAvgBuy">Avg Buy:</label>
-		        <input type="number" id="initialAvgBuy">
-		    </div>
-	    </div>
-	    
-	    <h2>Next Investments</h2>
-	    <div id="investment-container"></div>
-	    <button onclick="addInvestment()">Add</button>
-	    
-	    <button onclick="calculateDCA()">Calculate</button>
-	    <button onclick="resetCalculator()">Reset</button>
-	    <p id="resultShares" class="result"></p>
-	    <p id="resultAvgBuy" class="result"></p>
-	    <p id="resultTotalCost" class="result"></p>
-     </div>
-
-    <footer>
-        © CoinvestFolio. All rights reserved.
-    </footer>
+		     <div class="dca-calculator">
+			    
+			    <h2>Initial Investment</h2>
+			    <div class="investment-input">
+				    <div class="investment-field">
+				        <label for="initialShares">Shares:</label>
+				        <input type="number" id="initialShares">
+				    </div>
+				    <div class="investment-field">
+				        <label for="initialAvgBuy">Avg Buy:</label>
+				        <input type="number" id="initialAvgBuy">
+				    </div>
+			    </div>
+			    
+			    <h2>Next Investments</h2>
+			    <div id="investment-container"></div>
+			    <button onclick="addInvestment()">Add</button>
+			    
+			    <button onclick="calculateDCA()">Calculate</button>
+			    <button onclick="resetCalculator()">Reset</button>
+			    <p id="resultShares" class="result"></p>
+			    <p id="resultAvgBuy" class="result"></p>
+			    <p id="resultTotalCost" class="result"></p>
+		     </div>
     <!-- DCA Calculator 내용 끝 -->
 		</div><!-- /container -->
+		<footer>
+		        © CoinvestFolio. All rights reserved.
+		</footer>
 		<script src="js/classie.js"></script>
 		<script src="js/gnmenu.js"></script>
 		<script src="js/dca-calculator.js"></script>
