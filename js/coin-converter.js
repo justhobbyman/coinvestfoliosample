@@ -1,6 +1,11 @@
 let coinIdCache = {};
+const SUPPORTED_CURRENCIES = ['USD', 'EUR', 'GBP', 'KRW', 'JPY', 'CAD', 'AUD']; // Coinpaprika에서 지원하는 통화를 추가합니다.
 
 async function getCryptoPrice(coin, currency = 'usd') {
+    if (!SUPPORTED_CURRENCIES.includes(currency.toUpperCase())) {
+        throw new Error(`Currency ${currency} is not supported.`);
+    }
+
     if (!coinIdCache[coin]) {
         const coins = await loadAvailableCoins();
         const coinData = coins.find(c => c.symbol.toUpperCase() === coin.toUpperCase());
@@ -21,6 +26,7 @@ async function getCryptoPrice(coin, currency = 'usd') {
 
     return parseFloat(data.quotes[currency.toUpperCase()].price).toFixed(4);
 }
+
 
 async function loadAvailableCoins() {
     const API_URL = "https://api.coinpaprika.com/v1/tickers";
