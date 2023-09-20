@@ -1,58 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coin Converter</title>
-</head>
-<body>
-  <select id="coinSelect"></select>
-  <select id="currencySelect">
-    <option value="USD">USD</option>
-    <option value="EUR">EUR</option>
-    <option value="GBP">GBP</option>
-    <option value="KRW">KRW</option>
-    <option value="JPY">JPY</option>
-    <option value="CAD">CAD</option>
-    <option value="AUD">AUD</option>
-  </select>
-  <input type="number" id="coinAmount" placeholder="Amount" value="1">
-  <button onclick="fetchPrice()">Get Price</button>
-  <div id="priceResult"></div>
-  <script src="js/coin-converter.js"></script>
-  <script>
-     async function fetchPrice() {
-        const coin = document.getElementById('coinSelect').value;
-        const currency = document.getElementById('currencySelect').value;
-        const amount = parseFloat(document.getElementById('coinAmount').value);
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="img/icon.svg" type="image/svg+xml">
+		<title>CoinvestFolio</title>
+		<meta name="description" content="Easily calculate your cryptocurrency profit/loss, dca, etc with our Calculator." />
+		<meta name="keywords" content="Crypto, profit and loss, calculator, dca, spot, future" />
+		<meta name="author" content="CoinvestFolio" />
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5897295133273451"crossorigin="anonymous"></script>
+   		<meta name="google-site-verification" content="WqVYzW8N3gkE6iEBnUzrkVRODWjX37RLIEHehfhdf5E" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/coin-converter.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li><a href="spot-calculator"><span>Spot Calculator</span></a></li>
+								<li><a href="future-calculator">Future Calculator</a></li>
+								<li><a href="dca-calculator">DCA Calculator</a></li>
+								<li><a href="coin-converter">Coin Converter</a></li>
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<li><a href="https://www.coinvestfolio.com/">Home</a></li>
+			</ul>
+			<header>
+				<h1>Coin Converter</h1>
+			</header>
+      <div class="coin-converter">
+        <select id="coinSelect"></select>
+        <select id="currencySelect">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="KRW">KRW</option>
+            <option value="JPY">JPY</option>
+            <option value="CAD">CAD</option>
+            <option value="AUD">AUD</option>
+        </select>
+        <input type="number" id="coinAmount" placeholder="Amount" value="1">
+        <button onclick="fetchPrice()">Get Price</button>
+        <div id="priceResult"></div>
+        <!-- Coin Converter 추가 끝 -->
+    </div>
 
-        try {
-            const pricePerCoin = await getCryptoPrice(coin, currency);
-            const totalPrice = (pricePerCoin * amount).toFixed(4); // 계산된 총 가격도 소수점 4자리까지만 표시
-            document.getElementById('priceResult').innerText = `${amount} ${coin.toUpperCase()} = ${totalPrice} ${currency.toUpperCase()}`;
-        } catch (error) {
-            console.error("Error fetching price:", error);
-            document.getElementById('priceResult').innerText = "Error fetching price. Please try again.";
-        }
-    }
-
-    async function loadCoinOptions() {
-        try {
-            const coins = await loadTop50CoinsByVolume();
-            const coinSelect = document.getElementById('coinSelect');
-            coins.forEach(coin => {
-                const option = document.createElement('option');
-                option.value = coin.symbol;
-                option.textContent = coin.name;
-                coinSelect.appendChild(option);
-            });
-        } catch (error) {
-            console.error('Error loading coin options:', error);
-        }
-    }
-
-    window.addEventListener('DOMContentLoaded', loadCoinOptions);
-  </script>
-</body>
+    <footer>
+        © CoinvestFolio. All rights reserved.
+    </footer>
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/gnmenu.js"></script>
+		<script src="js/future-calculator.js"></script>
+		<script src="js/coin-converter.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+	</body>
 </html>
-
