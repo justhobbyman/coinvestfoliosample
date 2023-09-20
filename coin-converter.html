@@ -18,12 +18,15 @@
   <div id="priceResult"></div>
   <script src="js/coin-converter.js"></script>
   <script>
-    async function fetchPrice() {
+     async function fetchPrice() {
         const coin = document.getElementById('coinSelect').value;
         const currency = document.getElementById('currencySelect').value;
+        const amount = parseFloat(document.getElementById('coinAmount').value);
+
         try {
-            const price = await getCryptoPrice(coin, currency);
-            document.getElementById('priceResult').innerText = `1 ${coin.toUpperCase()} = ${price} ${currency.toUpperCase()}`;
+            const pricePerCoin = await getCryptoPrice(coin, currency);
+            const totalPrice = (pricePerCoin * amount).toFixed(4); // 계산된 총 가격도 소수점 4자리까지만 표시
+            document.getElementById('priceResult').innerText = `${amount} ${coin.toUpperCase()} = ${totalPrice} ${currency.toUpperCase()}`;
         } catch (error) {
             console.error("Error fetching price:", error);
             document.getElementById('priceResult').innerText = "Error fetching price. Please try again.";
