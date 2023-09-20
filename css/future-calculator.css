@@ -57,6 +57,7 @@ footer {
        	text-align: center;
        	padding: 10px 0;
        	margin-bottom: 10px;
+        z-index: -1;
        }
 button:focus, input:focus, select:focus {
             outline: 2px solid #EE7E19;
